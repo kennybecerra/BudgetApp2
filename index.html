@@ -1,0 +1,95 @@
+<!DOCTYPE html5>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
+		<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="CSS/flexboxgrid.css">
+		<link rel="stylesheet" type="text/css" href="CSS/Style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Budget App</title>
+	</head>
+
+	<body>
+
+		<section class="row top">
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 budget">
+				<p class="title">Available budget in <span id="month">month</span> <span id="year">year</span></p>
+				<p class="total">Total</p>
+				<div class="row income-show">
+					<p class="first">Income</p>
+					<p class="total-income">+ 0.00</p>
+					<p class="total-income-percent">0%</p>
+				</div>
+				<div class="row expenses-show">
+					<p class="first">Expenses</p>
+					<p class="total-expenses">+ 0.00</p>
+					<p class="total-expenses-percent">0%</p>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="row middle">
+			<select name="dropdown" id="mydropdown" class="my-dropdown">
+					<option value="plus" selected>+</option>
+					<option value="minus">-</option>
+				</select>
+			<input type="text" name="description" placeholder="Add description" maxlength="25" class="my-description">
+			<input type="number" name="amount" placeholder="Value" min="0" class="my-amount">
+			<button class="add-button">
+					<i class="ion-ios-checkmark-outline"></i>
+				</button>
+		</section>
+
+		<section class="row bottom">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 income" id="income">
+				<h3>income</h3>
+				<div class="row income-record" id="inc-rec-1">
+					<p class="item-description">Hellp</p>
+					<p class="item-amount">213.32</p>
+					<p class="item-percent">50%</p>
+					<button class="delete-button" onclick="DeleteElement(this)"><i class="ion-ios-close-outline"></i></button>
+				</div>
+				<div class="row income-record" id="inc-rec-2">
+					<p class="item-description">Income2</p>
+					<p class="item-amount">.50</p>
+					<p class="item-percent">50%</p>
+					<button class="delete-button" onclick="DeleteElement(this)"><i class="ion-ios-close-outline"></i></button>
+				</div>
+				<div class="row income-record" id="inc-rec-3">
+					<p class="item-description">Income3</p>
+					<p class="item-amount">1231.3</p>
+					<p class="item-percent">50%</p>
+					<button class="delete-button" onclick="DeleteElement(this)"><i class="ion-ios-close-outline"></i></button>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 expense" id="expense">
+				<h3>expenses</h3>
+				<div class="row expenses-record" id="exp-rec-1">
+					<p class="item-description">Expenses1</p>
+					<p class="item-amount">Total Expenses</p>
+					<p class="item-percent">60%</p>
+					<button class="delete-button" onclick="Testing1(this)"><i class="ion-ios-close-outline"></i></button>
+				</div>
+				<div class="row expenses-record" id="exp-rec-2">
+					<p class="item-description">Expenses2</p>
+					<p class="item-amount">Total Expenses</p>
+					<p class="item-percent">60%</p>
+					<button class="delete-button"><i class="ion-ios-close-outline"></i></button>
+				</div>
+				<div class="row expenses-record" id="exp-rec-3">
+					<p class="item-description">Expenses3</p>
+					<p class="item-amount">Total Expenses</p>
+					<p class="item-percent">60%</p>
+					<button class="delete-button"><i class="ion-ios-close-outline"></i></button>
+				</div>
+			</div>
+		</section>
+
+
+	<script src="JS/MyJS2.js"></script>
+	</body>
+
+</html>
