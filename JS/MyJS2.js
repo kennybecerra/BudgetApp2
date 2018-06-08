@@ -353,6 +353,27 @@ function FourthTest (sign, description, amount, id) {
 } 
 
 
+function TestingEvents() {
+var all = document.querySelectorAll('*');
+var items = Array.prototype.slice.call(document.querySelectorAll('*'))
+console.log(all);
+console.log(items);
+
+		function myFunc(element) {
+			var listeners = getEventListeners(element);
+				return {
+					element: element,
+					Parent: element.parentNode,
+					listeners: Object.keys(listeners).map(function(k) {return { event: k, listeners: listeners[k] };
+				})
+			};
+		}
+var newItems = items.map(myFunc).filter(function(item) { return item.listeners.length > 0});
+console.log(newItems);
+
+}
+
+
 function MyEvents(){
 	var items = Array.prototype.slice.call(document.querySelectorAll('*')).map(function(element) {
 		var listeners = getEventListeners(element);
